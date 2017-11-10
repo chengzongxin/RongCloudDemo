@@ -15,9 +15,9 @@
 		1401BAC61FB53D9C00A760F4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1401BAC51FB53D9C00A760F4 /* main.m */; };
 		1401BAD01FB53D9C00A760F4 /* RongCloudDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1401BACF1FB53D9C00A760F4 /* RongCloudDemoTests.m */; };
 		1401BADB1FB53D9C00A760F4 /* RongCloudDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1401BADA1FB53D9C00A760F4 /* RongCloudDemoUITests.m */; };
-		14108C011FB553930096A538 /* ConversationListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14108C001FB553930096A538 /* ConversationListViewController.m */; };
-		14108C041FB55B150096A538 /* ConversationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14108C031FB55B150096A538 /* ConversationViewController.m */; };
-		14108C071FB5880C0096A538 /* UserInfoDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 14108C061FB5880C0096A538 /* UserInfoDataSource.m */; };
+		14E420091FB5CF82001C8124 /* ConversationListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14E420041FB5CF82001C8124 /* ConversationListViewController.m */; };
+		14E4200A1FB5CF82001C8124 /* ConversationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14E420061FB5CF82001C8124 /* ConversationViewController.m */; };
+		14E4200B1FB5CF82001C8124 /* UserInfoDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 14E420081FB5CF82001C8124 /* UserInfoDataSource.m */; };
 		7ED8FE34586D10A8014A9BEB /* libPods-RongCloudDemoTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 84FC80AC949FCABE4A8FE5CE /* libPods-RongCloudDemoTests.a */; };
 		80F8CB331D949916537A8B6C /* libPods-RongCloudDemoUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 071F5038A471504D41EAF4E0 /* libPods-RongCloudDemoUITests.a */; };
 		D83CD77CA266EC608116A6F4 /* libPods-RongCloudDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ED4E1D834ABED18FA691940D /* libPods-RongCloudDemo.a */; };
@@ -59,12 +59,12 @@
 		1401BAD61FB53D9C00A760F4 /* RongCloudDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RongCloudDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1401BADA1FB53D9C00A760F4 /* RongCloudDemoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RongCloudDemoUITests.m; sourceTree = "<group>"; };
 		1401BADC1FB53D9C00A760F4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		14108BFF1FB553930096A538 /* ConversationListViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ConversationListViewController.h; sourceTree = "<group>"; };
-		14108C001FB553930096A538 /* ConversationListViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ConversationListViewController.m; sourceTree = "<group>"; };
-		14108C021FB55B150096A538 /* ConversationViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ConversationViewController.h; sourceTree = "<group>"; };
-		14108C031FB55B150096A538 /* ConversationViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ConversationViewController.m; sourceTree = "<group>"; };
-		14108C051FB5880C0096A538 /* UserInfoDataSource.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UserInfoDataSource.h; sourceTree = "<group>"; };
-		14108C061FB5880C0096A538 /* UserInfoDataSource.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UserInfoDataSource.m; sourceTree = "<group>"; };
+		14E420031FB5CF82001C8124 /* ConversationListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConversationListViewController.h; sourceTree = "<group>"; };
+		14E420041FB5CF82001C8124 /* ConversationListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConversationListViewController.m; sourceTree = "<group>"; };
+		14E420051FB5CF82001C8124 /* ConversationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConversationViewController.h; sourceTree = "<group>"; };
+		14E420061FB5CF82001C8124 /* ConversationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConversationViewController.m; sourceTree = "<group>"; };
+		14E420071FB5CF82001C8124 /* UserInfoDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserInfoDataSource.h; sourceTree = "<group>"; };
+		14E420081FB5CF82001C8124 /* UserInfoDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserInfoDataSource.m; sourceTree = "<group>"; };
 		184CF3F865A04C6E34266775 /* Pods-RongCloudDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RongCloudDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-RongCloudDemo/Pods-RongCloudDemo.release.xcconfig"; sourceTree = "<group>"; };
 		2CBF35825E057701412458E2 /* Pods-RongCloudDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RongCloudDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RongCloudDemo/Pods-RongCloudDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		84FC80AC949FCABE4A8FE5CE /* libPods-RongCloudDemoTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RongCloudDemoTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -127,16 +127,11 @@
 		1401BAB51FB53D9C00A760F4 /* RongCloudDemo */ = {
 			isa = PBXGroup;
 			children = (
+				14E420021FB5CF82001C8124 /* Chat */,
 				1401BAB61FB53D9C00A760F4 /* AppDelegate.h */,
 				1401BAB71FB53D9C00A760F4 /* AppDelegate.m */,
 				1401BAB91FB53D9C00A760F4 /* ViewController.h */,
 				1401BABA1FB53D9C00A760F4 /* ViewController.m */,
-				14108BFF1FB553930096A538 /* ConversationListViewController.h */,
-				14108C001FB553930096A538 /* ConversationListViewController.m */,
-				14108C021FB55B150096A538 /* ConversationViewController.h */,
-				14108C031FB55B150096A538 /* ConversationViewController.m */,
-				14108C051FB5880C0096A538 /* UserInfoDataSource.h */,
-				14108C061FB5880C0096A538 /* UserInfoDataSource.m */,
 				1401BABC1FB53D9C00A760F4 /* Main.storyboard */,
 				1401BABF1FB53D9C00A760F4 /* Assets.xcassets */,
 				1401BAC11FB53D9C00A760F4 /* LaunchScreen.storyboard */,
@@ -162,6 +157,19 @@
 				1401BADC1FB53D9C00A760F4 /* Info.plist */,
 			);
 			path = RongCloudDemoUITests;
+			sourceTree = "<group>";
+		};
+		14E420021FB5CF82001C8124 /* Chat */ = {
+			isa = PBXGroup;
+			children = (
+				14E420031FB5CF82001C8124 /* ConversationListViewController.h */,
+				14E420041FB5CF82001C8124 /* ConversationListViewController.m */,
+				14E420051FB5CF82001C8124 /* ConversationViewController.h */,
+				14E420061FB5CF82001C8124 /* ConversationViewController.m */,
+				14E420071FB5CF82001C8124 /* UserInfoDataSource.h */,
+				14E420081FB5CF82001C8124 /* UserInfoDataSource.m */,
+			);
+			path = Chat;
 			sourceTree = "<group>";
 		};
 		6108C8A456ADBD7A5A415E3A /* Pods */ = {
@@ -469,10 +477,10 @@
 			files = (
 				1401BABB1FB53D9C00A760F4 /* ViewController.m in Sources */,
 				1401BAC61FB53D9C00A760F4 /* main.m in Sources */,
-				14108C011FB553930096A538 /* ConversationListViewController.m in Sources */,
+				14E420091FB5CF82001C8124 /* ConversationListViewController.m in Sources */,
 				1401BAB81FB53D9C00A760F4 /* AppDelegate.m in Sources */,
-				14108C041FB55B150096A538 /* ConversationViewController.m in Sources */,
-				14108C071FB5880C0096A538 /* UserInfoDataSource.m in Sources */,
+				14E4200A1FB5CF82001C8124 /* ConversationViewController.m in Sources */,
+				14E4200B1FB5CF82001C8124 /* UserInfoDataSource.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

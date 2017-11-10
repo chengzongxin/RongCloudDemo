@@ -9,6 +9,7 @@
 #import "AppDelegate.h"
 #import <RongIMKit/RongIMKit.h>
 #import "UserInfoDataSource.h"
+#import <RongIMLib/RongIMLib.h>
 
 @interface AppDelegate ()
 @property (nonatomic,strong) UserInfoDataSource *userInfo;
