@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-
-@interface UserInfoDataSource : NSObject
+#import <RongIMKit/RongIMKit.h>
+@interface UserInfoDataSource : NSObject <RCIMUserInfoDataSource>
 
 @end

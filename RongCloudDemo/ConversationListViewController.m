@@ -7,6 +7,7 @@
 //
 
 #import "ConversationListViewController.h"
+#import "ConversationViewController.h"
 
 @interface ConversationListViewController ()
 
@@ -17,21 +18,50 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    NSLog(@"%@",self.userID);
+    
+    self.displayConversationTypeArray = @[@(ConversationType_PRIVATE)];
+    
+    self.conversationListTableView.tableFooterView = [UIView new];
+    self.showConnectingStatusOnNavigatorBar = true;
+    self.isShowNetworkIndicatorView = true;
+    
+//    self.navigationController.viewControllers = @[self];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (void)willDisplayConversationTableCell:(RCConversationBaseCell *)cell atIndexPath:(NSIndexPath *)indexPath{
+    
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (void)onSelectedTableRow:(RCConversationModelType)conversationModelType conversationModel:(RCConversationModel *)model atIndexPath:(NSIndexPath *)indexPath{
+    [self performSegueWithIdentifier:@"ConversationViewController" sender:model.targetId];
 }
-*/
+- (IBAction)close:(id)sender {
+    [[RCIM sharedRCIM] logout];
+    [self.navigationController popViewControllerAnimated:true];
+}
+
+- (IBAction)add:(id)sender {
+    NSString *targetID;
+
+    if ([[[RCIMClient sharedRCIMClient] currentUserInfo].userId isEqualToString:@"Cheng"]){
+        targetID = @"Zhou";
+        [self performSegueWithIdentifier:@"ConversationViewController" sender:targetID];
+    }else{
+        targetID = @"Cheng";
+        [self performSegueWithIdentifier:@"ConversationViewController" sender:targetID];
+    }
+    
+    
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+    ConversationViewController *vc = [segue destinationViewController];
+    vc.conversationType = ConversationType_PRIVATE;
+    vc.targetId = sender;
+    vc.title = sender;
+}
+
 
 @end

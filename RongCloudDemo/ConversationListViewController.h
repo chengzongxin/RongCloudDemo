@@ -10,4 +10,6 @@
 
 @interface ConversationListViewController : RCConversationListViewController
 
+@property (copy,nonatomic) NSString *userID;
+
 @end

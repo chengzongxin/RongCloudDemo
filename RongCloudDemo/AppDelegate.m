@@ -7,9 +7,11 @@
 //
 
 #import "AppDelegate.h"
+#import <RongIMKit/RongIMKit.h>
+#import "UserInfoDataSource.h"
 
 @interface AppDelegate ()
-
+@property (nonatomic,strong) UserInfoDataSource *userInfo;
 @end
 
 @implementation AppDelegate
@@ -17,6 +19,11 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    [[RCIM sharedRCIM] initWithAppKey:@"mgb7ka1nmwueg"];
+    _userInfo = [UserInfoDataSource new];
+    [[RCIM sharedRCIM] setUserInfoDataSource:_userInfo];
+    
     return YES;
 }
 
