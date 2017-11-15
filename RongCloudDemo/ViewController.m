@@ -9,6 +9,7 @@
 #import "ViewController.h"
 #import <RongIMKit/RongIMKit.h>
 #import "ConversationListViewController.h"
+#import "LoginViewController.h"
 
 @interface ViewController ()
 @end
@@ -19,6 +20,11 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
 }
+
+- (IBAction)live:(id)sender {
+    [self.navigationController pushViewController:[LoginViewController new] animated:YES];
+}
+
 
 - (IBAction)click123:(id)sender {
     [self connectWithToken:@"kH3bSmLZFQKxcOfg1X/pZmEiumtcjMJVADC50XbwMWWEhBZj811/v/BAylg0GB4/81b/qevqu6O0rVrAlSeOMA==" sender:sender];

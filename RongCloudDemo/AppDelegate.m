@@ -10,6 +10,8 @@
 #import <RongIMKit/RongIMKit.h>
 #import "UserInfoDataSource.h"
 #import <RongIMLib/RongIMLib.h>
+#import "RCDLive.h"
+#import "RCDLiveGiftMessage.h"
 
 @interface AppDelegate ()
 @property (nonatomic,strong) UserInfoDataSource *userInfo;
@@ -21,13 +23,42 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     
-    [[RCIM sharedRCIM] initWithAppKey:@"mgb7ka1nmwueg"];
+    [[RCIM sharedRCIM] initWithAppKey:RONGCLOUD_IM_APPKEY];
     _userInfo = [UserInfoDataSource new];
     [[RCIM sharedRCIM] setUserInfoDataSource:_userInfo];
+    
+    [[RCDLive sharedRCDLive] initRongCloud:RONGCLOUD_IM_APPKEY];
+    //注册自定义消息
+    [[RCDLive sharedRCDLive] registerRongCloudMessageType:[RCDLiveGiftMessage class]];
+    
+    NSString *plistPath = [[NSBundle mainBundle] pathForResource:@"RoleList" ofType:@"plist"];
+    NSMutableDictionary *data = [[NSMutableDictionary alloc] initWithContentsOfFile:plistPath];
+    _userList = [[NSMutableArray alloc]init];
+    RCUserInfo *user = [self parseUserInfoFormDic:[data objectForKey:@"User1"]];
+    [_userList  addObject:user];
+    RCUserInfo *user2 = [self parseUserInfoFormDic:[data objectForKey:@"User2"]];
+    [_userList  addObject:user2];
+    RCUserInfo *user3 = [self parseUserInfoFormDic:[data objectForKey:@"User3"]];
+    [_userList  addObject:user3];
+    RCUserInfo *user4 = [self parseUserInfoFormDic:[data objectForKey:@"User4"]];
+    [_userList  addObject:user4];
+    RCUserInfo *user5 = [self parseUserInfoFormDic:[data objectForKey:@"User5"]];
+    [_userList  addObject:user5];
+    RCUserInfo *user6 = [self parseUserInfoFormDic:[data objectForKey:@"User6"]];
+    [_userList  addObject:user6];
+    RCUserInfo *user7 = [self parseUserInfoFormDic:[data objectForKey:@"User7"]];
+    [_userList  addObject:user7];
     
     return YES;
 }
 
+-(RCUserInfo *)parseUserInfoFormDic:(NSDictionary *)dic{
+    RCUserInfo *user = [[RCUserInfo alloc]init];
+    user.userId = [dic objectForKey: @"id" ];
+    user.name = [dic objectForKey: @"name" ];
+    user.portraitUri = [dic objectForKey: @"icon" ];
+    return user;
+}
 
 - (void)applicationWillResignActive:(UIApplication *)application {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
